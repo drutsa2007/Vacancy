@@ -1,0 +1,23 @@
+import apiClient from "apiClient";
+
+const App = () => {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    apiClient.get('/posts').then((response) => {
+      setData(response.data)
+    });
+  }, []);
+
+  return (
+    <div className="app">
+        {data.map((item, idx) => {
+            return (
+                <div key={idx}>{item.title}</div>
+            )
+        })}
+    </div>
+  );
+}
+
+export default App;

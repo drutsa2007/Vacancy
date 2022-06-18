@@ -1,0 +1,47 @@
+На главном сделать это
+import {QueryClient, QueryClientProvider} from "react-query";
+import apiClient from "./addons/apiClient";
+
+const queryClient = new QueryClient()
+
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className="app">
+        <Content/>
+      </div>
+    </QueryClientProvider>
+  );
+}
+
+export default App;
+
+
+На внутреннем в Content сделать так
+
+import {useQuery} from "react-query";
+import apiClient from "apiClient";
+
+const Content = () => {
+	const { isLoading, isSuccess, data } = useQuery("dat123", async() => {
+        const {data} = await apiClient.get('/posts');
+        return data;
+	});
+    
+  return (
+    <div>
+        {isLoading && <div>Loading</div>}
+        {isSuccess && 
+            <div>
+                {data.map((item, idx) => {
+                    return (
+                        <div key={idx}>{item.title}</div>
+                    )
+                })}
+            </div>
+        }
+    </div>
+  );
+}
+
+export default Content;

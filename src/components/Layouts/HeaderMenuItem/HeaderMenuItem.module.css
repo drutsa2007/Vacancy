@@ -1,0 +1,9 @@
+.menuItem {
+    color: #555555;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #f00;
+}
+.menuItem:hover {
+    color: #fff;
+}

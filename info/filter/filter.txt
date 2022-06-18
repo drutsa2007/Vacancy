@@ -1,0 +1,59 @@
+import { useState, useEffect } from 'react';
+import {defvacancy} from './data/data';
+
+
+const App = () => {
+  const [vacancy, setVacancy] = useState(defvacancy)
+
+  const [level, setLevel] = useState("")
+  const [mode, setMode] = useState("")
+  const [distant, setDistant] = useState(false)
+
+  const filterAll = () => {
+    let result = defvacancy
+    if (level) {
+      result = result.filter((el) => el.level === level)
+    }
+    if (mode) {
+      result = result.filter((el) => el.mode.includes(mode))
+    }
+    if (distant) {
+      result = result.filter((el) => el.submode === distant)
+    }
+    setVacancy(result)
+  }
+
+  useEffect(filterAll, [level, mode, distant])
+
+  return (
+    <div className="app">
+    <select onChange={(e) => {setLevel(e.target.value)}}>
+        <option value="">Любой</option>
+        <option value="Junior">Junior</option>
+        <option value="Middle">Middle</option>
+        <option value="Senior">Senior</option>
+    </select>
+    <select onChange={(e) => {setMode(e.target.value)}}>
+        <option value="">Любая</option>
+        <option value="Полный день">Полный день</option>
+        <option value="Частичная занятость">Частичная занятость</option>
+        <option value="Работа в офисе">Работа в офисе</option>
+    </select>
+    <input type="checkbox" onClick={(e) => {setDistant(e.target.checked)}}/><br/>
+    {vacancy.map((item, idx) => {
+        return (
+        <div key={idx}>
+            {item.role}<br/>
+            {item.level}<br/>
+            {item.mode}<br/>
+            {item.submode.toString()}<br/>
+            <hr/>
+        </div>
+        )
+    })}
+
+    </div>
+  );
+}
+
+export default App;

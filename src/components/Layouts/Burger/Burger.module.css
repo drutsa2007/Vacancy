@@ -1,0 +1,53 @@
+.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;  
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 24;
+    position: fixed;
+}
+.active {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.window {
+    background-color: var(--block-color);
+    width: 250px;
+    padding: 8px 10px;
+    z-index: 27;
+    height: 100%;
+    position: fixed;
+}
+.x {
+    cursor: pointer;
+    color: #555555;
+}
+.x:hover {
+    color: red;
+}
+.sidebarMenu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;    
+}
+.sidebarMenu a, .sidebarMenu span {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 3px 0;
+    cursor: pointer;
+}
+.sidebarMenu a:hover, .sidebarMenu span:hover {
+    color: #D2691E;
+}
+.separator {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--background-color);
+    height: 1px;
+    border: none; 
+}

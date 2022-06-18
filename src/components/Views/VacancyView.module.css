@@ -1,0 +1,70 @@
+.image {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.image img {
+    object-fit:cover;
+}
+.vacancy {
+    padding: 10px;
+}
+.vacancy ul  {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.vacancyDate {
+    color: #555555;
+    font-size: 12px;
+    text-align: right;
+}
+.vacancyCaption {
+    font-size: 20px;
+    text-align: center;
+    color: #D2691E;
+    font-weight: bold;
+}
+.vacancyLevel {
+    text-align: center;
+}
+.vacancySalary {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #D2691E;
+    box-shadow: 0 0 2px #D2691E, inset 0 0 2px #D2691E;
+    border-radius: 4px;
+    padding: 10px 0;
+    background-color: #2E2E36;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.vacancySide {
+    text-align: center;
+}
+.step {
+    font-weight: bold;
+    color: #D2691E;
+}
+.vacancyTasks, .vacancyNeeds, .vacancyPluses {
+    margin-top: 10px;
+}
+.vacancyStacks {
+    margin-top: 10px;
+    color: #555555;
+}
+.vacancyButton {
+    text-align: center;
+}
+.button {
+    margin-top: 10px;
+    border: none;
+    background-color: #3b5998;
+    border-radius: 4px;
+    padding: 7px 14px;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 200px;
+}
