@@ -1,0 +1,27 @@
+.searchBlock {
+    width: 250px;
+    background-color: var(--block-color);
+    margin-right: 20px;
+    padding: 10px;
+}
+.searchBlock hr {
+    height: 1px;
+    background-color: #555555;
+    border: none;
+}
+.caption {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555555;
+}
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #D2691E;
+}
+.zp {
+    display: flex;
+    justify-content: flex-start ;
+}

@@ -17,15 +17,10 @@ const Burger = (props) => {
         <div className={style.window} onClick={(e) => e.stopPropagation()}>
             <div className={style.caption}>
 								<div>{props.title}</div>
-								<div onClick={() => props.setBurgerShow(false)}>
-										<FontAwesomeIcon icon={faXmark} className={style.x} size="2x"/>
+								<div onClick={() => props.setBurgerShow(false)} align="right">
+										<FontAwesomeIcon icon={faXmark} className={style.x}/>
 								</div>
                 <div className={style.sidebarMenu}>
-                  <Link to="/">Главная</Link>
-                  <Link to="/filter">Фильтрация</Link>
-                  <hr className={style.separator}/>
-                  <ChangeTheme>Сменить тему</ChangeTheme>
-                  <hr className={style.separator}/>
                   <Link to="/">Личный кабинет</Link>
                   <Link to="/">Выход</Link>
                   <Link to="/">Вход</Link>

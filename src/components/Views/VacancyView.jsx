@@ -11,7 +11,6 @@ const VacancyView = () => {
   const {id} = useParams()
   return (
     <div>
-		<Header/>
 		<div className={style.image}>
 			<img src='/img/vacancy.jpg' alt="vacancy" align="center" width="280px"/>
 		</div>

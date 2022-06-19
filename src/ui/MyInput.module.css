@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.prefix {
+    display: inline-block;
+    margin-right: 5px;
+}
+.input {
+    padding: 4px 8px;
+    text-align: center;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+.input:focus {
+    box-shadow: 0 0 6px #0165E1;
+}

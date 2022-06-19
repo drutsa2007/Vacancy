@@ -1,0 +1,23 @@
+.button {
+    border-top: 1px solid #17A9FD;
+    border-right: 1px solid #0165E1;
+    border-bottom: 1px solid #0165E1;
+    border-left: 1px solid #17A9FD;
+    /*background-color: #0165E1;*/
+    background-image: linear-gradient(to bottom, #0165E1, #17A9FD);
+    border-radius: 4px;
+    padding: 7px 14px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 0px 9px rgba(195, 195, 195, 0.35);
+}
+.button:hover {
+    /*background-color: #17A9FD;*/
+    border-top: 1px solid #0165E1;
+    border-right: 1px solid #17A9FD;
+    border-bottom: 1px solid #17A9FD;
+    border-left: 1px solid #0165E1;
+    background-image: linear-gradient(to bottom, #17A9FD, #0165E1);
+    transition: all 1s ease-in-out;
+    
+}

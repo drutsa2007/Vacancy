@@ -1,4 +1,4 @@
-import style from './Vacancy.module.css';
+import style from './VacancySearch.module.css';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import MyModal from '../../ui/MyModal'
@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLocationDot} from "@fortawesome/free-solid-svg-icons";
 import MyButton from '../../ui/MyButton';
 
-const Vacancy = () => {
+const VacancySearch = () => {
   const [visible, setVisible] = useState(false)
   return (
     <div className={style.vacancy}>
@@ -30,4 +30,4 @@ const Vacancy = () => {
   );
 }
 
-export default Vacancy;
+export default VacancySearch;

@@ -21,7 +21,7 @@ const ChangeTheme = ({children}) => {
     }
     else {
       root.style.setProperty('--background-color', '#FFFFF0');
-      root.style.setProperty('--block-color', '#D4D4C7');
+      root.style.setProperty('--block-color', '#E6E6E1');
       root.style.setProperty('--font-color', '#16161a');
       setTheme('light')
       localStorage.setItem("theme", "light")

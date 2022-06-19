@@ -4,13 +4,13 @@ import Footer from '../Layouts/Footer/Footer';
 import SiteCaption from '../SiteCaption/SiteCaption';
 import Vacancy from './Vacancy';
 import Counter from '../../store/Counter';
+import Filter from '../Filter/Filter';
 
 
 
 const Main = () => {
   return (
     <div>
-      <Header/>
       <SiteCaption/>
       <h3 align="center">Новые вакансии</h3>
       <div className={style.vacancies}>

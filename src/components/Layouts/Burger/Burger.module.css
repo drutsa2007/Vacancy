@@ -16,15 +16,18 @@
 }
 .window {
     background-color: var(--block-color);
-    width: 250px;
+    width: 150px;
+    right: 0;
     padding: 8px 10px;
     z-index: 27;
-    height: 100%;
     position: fixed;
 }
 .x {
     cursor: pointer;
     color: #555555;
+    font-size: 30px;
+    padding-top: 3px;
+    padding-right: 3px;
 }
 .x:hover {
     color: red;
