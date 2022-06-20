@@ -12,7 +12,12 @@ import Header from './components/Layouts/Header/Header';
 const queryClient = new QueryClient()
 
 const App = () => {
-
+  if (localStorage.getItem("theme") === "light") {
+    let root = document.querySelector(':root');
+    root.style.setProperty('--background-color', '#FFFFF0');
+    root.style.setProperty('--block-color', '#D9D9CA');
+    root.style.setProperty('--font-color', '#16161a');
+  }
   return (
     <QueryClientProvider client={queryClient}>
       <div className="app">
@@ -22,7 +27,6 @@ const App = () => {
             <Route path="/" element={<Main />}/>
             {/*<Route path="/stack/:stack" element={<Stack />}/>*/}
             <Route path="/search" element={<Search />}/>
-            <Route path="/search/:type" element={<Search />}/>
             <Route path="/vacancy/:id" element={<VacancyView />}/>
             <Route path="*" element={<Error404 />} />
           </Routes>

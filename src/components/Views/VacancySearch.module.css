@@ -1,11 +1,10 @@
 .vacancy {
-    width: 280px;
-    border: 1px solid #555555;
-    margin: 10px 10px 10px 10px;
+    width: 400px;
+    margin: 0 20px 20px 0;
     padding: 10px;
     border-radius: 4px;
     background-color: var(--block-color);
-    box-shadow: 0 2px 2px #000000;
+    box-shadow: 2px 2px 4px #555555;
 }
 .caption {
     font-size: 1.5rem;

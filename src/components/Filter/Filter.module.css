@@ -3,6 +3,8 @@
     background-color: var(--block-color);
     margin-right: 20px;
     padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #555555;
 }
 .searchBlock hr {
     height: 1px;

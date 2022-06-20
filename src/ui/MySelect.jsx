@@ -1,11 +1,20 @@
 import style from './MySelect.module.css';
 
-const MySelect = ({option_default = "Выбрать...", options}) => {
+const MySelect = ({option_default = "Выбрать...", options, current = ""}) => {
   return (
     <div>
-        <select className={style.select}>
+        <select className={style.select} defaultValue={current}>
             <option value="">{option_default}</option>
-            {options.map((el, idx) => <option key={idx} value={el}>{el}</option>)}
+            {options.map((el, idx) => {
+              return (
+                <option 
+                  key={idx} 
+                  value={el}
+                >
+                  {el}
+                </option>
+              )
+            })}
         </select>
     </div>
   );

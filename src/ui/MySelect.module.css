@@ -6,3 +6,6 @@
     outline: none;
     width: 100%;
 }
+.select:focus {
+    box-shadow: 0 0 6px #0165E1;
+}

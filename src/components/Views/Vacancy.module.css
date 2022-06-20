@@ -31,6 +31,10 @@
 .mode {
     color: #555555;
 }
+.stacks {
+    color: #555555;
+    margin-bottom: 10px;
+}
 
 
 @media (min-width: 300px) {

@@ -4,48 +4,44 @@
     top: 0;
     bottom: 0;  
     right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background-color: #16161a;
     display: none;
     z-index: 24;
-    position: fixed;
 }
 .active {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.window {
-    background-color: var(--block-color);
-    width: 150px;
-    right: 0;
-    padding: 8px 10px;
-    z-index: 27;
+    display: block;
     position: fixed;
 }
 .x {
     cursor: pointer;
-    color: #555555;
+    color: #ffffff;
     font-size: 30px;
-    padding-top: 3px;
-    padding-right: 3px;
+    padding-top: 9px;
+    padding-right: 17px;
 }
 .x:hover {
     color: red;
 }
 .sidebarMenu {
-    margin-top: 10px;
+    margin-top: 30px;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.sidebarMenu a, .sidebarMenu span {
-    color: var(--font-color);
+.sidebarMenu a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
     text-decoration: none;
-    padding: 3px 0;
+    padding: 5px 0;
     cursor: pointer;
+    margin-bottom: 5px;
 }
-.sidebarMenu a:hover, .sidebarMenu span:hover {
+.sidebarMenu a:hover {
     color: #D2691E;
+    background-color: #ffffff;
 }
 .separator {
     width: 100%;

@@ -3,30 +3,19 @@ import MyInput from '../../ui/MyInput';
 import MyButton from '../../ui/MyButton';
 import MyCheckbox from '../../ui/MyCheckbox';
 import MySelect from '../../ui/MySelect';
+import {useSearchParams} from 'react-router-dom';
+import {levels, stacks, languages, frameworks} from '../../addons/filter';
 
 const Filter = () => {
-  const handleSubmit = () => {console.log(123);}
-  const technologies = [
-    "Frontend developer", "Backend developer", "Fullstack developer", "Desktop developer", "Mobile developer",
-    "QA engineer", "Database developers", "DevOps engineer", "Data scientists"
-  ]
-  const languages = [
-    "Python", "Java", "C/C++", "C#", "Kotlin", "Go", "PHP", "JavaScript", "TypeScript", "Swift", "Ruby"
-  ]
-  const frameworks = [
-    "Django", "Flask", "Laravel", "Yii/Yii2", "Simfony", "React", "Vue", "Angular"
-  ]
-  const levels = [
-    "Intern", "Junior", "Middle", "Senior", "TeamLead"
-  ]
+  let [searchParams, setSearchParams] = useSearchParams();
 
   return (
     <div>
       <div className={style.searchBlock}>
         <div className={style.caption}>Фильтрация</div>
-        <form onSubmit={handleSubmit()}>   
+        <form>   
           <div className={style.subtitle}>Стек технологий:</div>
-          <MySelect options={technologies}/>
+          <MySelect options={stacks} current={searchParams.get("stack")}/>
           <hr />
 
           <div className={style.subtitle}>Языки программирования:</div>
@@ -38,7 +27,7 @@ const Filter = () => {
           <hr />
 
           <div className={style.subtitle}>Уровень:</div>
-          <MySelect options={levels}/>
+          <MySelect options={levels} current={searchParams.get("level")}/>
           <hr />
 
           <div className={style.subtitle}>Зарплата</div>
@@ -60,7 +49,7 @@ const Filter = () => {
           <MyCheckbox title={"Удаленная работа"}/>
           
           <br/>
-          <MyButton title={"Поиск"}/>
+          <div align="center"><MyButton title={"Поиск"}/></div>
           <br />
         </form>
       </div>
